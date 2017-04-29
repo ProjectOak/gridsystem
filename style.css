@@ -19,6 +19,7 @@ html {
 
 body {
   margin: 0;
+  height: 100vh;
 }
 
 /************************************************************
@@ -61,25 +62,31 @@ NAVIGATIONS
   background-color: #cccccc;
 }
 
+.nav-bottom{
+   position:fixed;
+   left:0px;
+   bottom:0px;
+}
+
 /************************************************************
 CONTENT
 *************************************************************/
 
 .view{
-  height: 100vh;
   width: 100%;
 }
 
 .content{
   margin: 0;
   width: 100%;
+  height: 100%;
   text-align: center;
   background-color: #f0f0f0;
 }
 
 .grid{
   margin: 0 auto;
-  height: 69%;
+  height: 67.5%;
   max-width: 45em;
   padding: 5px;
 }
@@ -166,16 +173,3 @@ GRID SYSTEM
 .col-5:active{
   background-color: #d7d7d7;
 }
-
-#active{
-  background-color: #d7d7d7;
-}
-
-/* SECTIONS */
-
-.main{
-  width: 100%;
-  height: 300vh;
-  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/cutcube.png);
-}
-
