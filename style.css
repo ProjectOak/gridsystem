@@ -1,0 +1,181 @@
+/************************************************************
+BASE
+*************************************************************/
+
+html {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+/************************************************************
+TYPOGRAPHY
+*************************************************************/
+
+h1{
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 2.6em;
+  line-height: 1;
+}
+
+p{
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.2;
+}
+
+b{
+  font-weight: 700;
+}
+
+blockquote{
+  font-family: 'Montserrat', Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  font-style: italic;
+  line-height: 1;
+}
+
+/************************************************************
+NAVIGATIONS
+*************************************************************/
+
+[class*="nav-"] {
+  height: 65px;
+  width: 100%;
+  background-color: #cccccc;
+}
+
+/************************************************************
+CONTENT
+*************************************************************/
+
+.view{
+  height: 100vh;
+  width: 100%;
+}
+
+.content{
+  margin: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.grid{
+  margin: 0 auto;
+  height: 69%;
+  max-width: 45em;
+  padding: 5px;
+}
+
+.col{
+  height: 50%;
+}
+
+.unit{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.18);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.18);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.18);
+  transition: box-shadow 250ms linear;
+}
+
+.unit:hover{
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(:0,0,0,0.35);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.35);
+}
+
+button{
+  margin: 30px auto;
+  padding: 20px 80px;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #333333;
+  cursor: pointer;
+  transition: background-color 250ms linear;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
+/************************************************************
+GRID SYSTEM
+*************************************************************/
+
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table;
+}
+
+.row:after {
+  clear: both;
+}
+
+[class*="col-"] {
+  position: relative;
+  float: left;
+  padding: 5px;
+}
+
+.col-1{
+  width: 100%;
+}
+
+.col-1-2{
+  width: 50%;
+}
+
+.col-1-3{
+  width: 33.3333%;
+}
+
+.col-2-3{
+  width: 66.6666%;
+}
+
+.col-5{
+  width: 20%;
+}
+
+.col-5:hover,
+.col-5:active{
+  background-color: #d7d7d7;
+}
+
+#active{
+  background-color: #d7d7d7;
+}
+
+/* SECTIONS */
+
+.main{
+  width: 100%;
+  height: 300vh;
+  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/cutcube.png);
+}
+
