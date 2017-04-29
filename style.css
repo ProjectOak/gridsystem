@@ -85,8 +85,8 @@ CONTENT
 
 .grid{
   margin: 0 auto;
-  max-width: 45em;
-  height: 69.3vh;
+  max-width: 760px;
+  height: 69.2vh;
   padding: 5px;
 }
 
@@ -164,10 +164,15 @@ GRID SYSTEM
   width: 66.6666%;
 }
 
-/* Portrait */
+
+/************************************************************
+MEDIA QUERY
+*************************************************************/
+
+
 @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) {
   .grid {
-      height: 66vh;
+      height: 65.5vh;
   }
 }
 
