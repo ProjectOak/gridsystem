@@ -241,7 +241,7 @@ MEDIA QUERY
 *************************************************************/
 
 
-@media screen and (min-device-width: 360px) and (min-device-height: 640px) {
+@media screen and (max-device-width: 360px) and (max-device-height: 640px) {
   .grid {
       height: 60vh;
   }
