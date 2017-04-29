@@ -90,7 +90,7 @@ CONTENT
 }
 
 .col{
-  height: 35vh;
+  height: 50%;
 }
 
 .unit{
@@ -171,16 +171,3 @@ GRID SYSTEM
 .col-5:active{
   background-color: #d7d7d7;
 }
-
-#active{
-  background-color: #d7d7d7;
-}
-
-/* SECTIONS */
-
-.main{
-  width: 100%;
-  height: 300vh;
-  background-image: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/cutcube.png);
-}
-
