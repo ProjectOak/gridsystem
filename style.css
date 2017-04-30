@@ -13,7 +13,7 @@ html {
   box-sizing: border-box;
 }
 
-.no-outline{
+.noselect{
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -21,7 +21,6 @@ html {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  outline: 0;
 }
 
 *, *:before, *:after {
@@ -33,14 +32,7 @@ html {
 body {
   margin: 0;
   height: 100vh;
-}
-
-.preload * {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -ms-transition: none !important;
-  -o-transition: none !important;
-  -o-transition: none !important;
+  background-color: f0f0f0;
 }
 
 /************************************************************
@@ -55,8 +47,7 @@ h1{
 }
 
 p,
-button,
-input{
+button{
   font-family: 'Montserrat', Helvetica, sans-serif;
   font-weight: 400;
   font-size: 0.9em;
@@ -100,152 +91,112 @@ COLORS
 }
 
 /************************************************************
+NAVIGATIONS
+*************************************************************/
+
+[class*="nav-"] {
+  height: 70px;
+  width: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+  transition: box-shadow 150ms ease-in;
+}
+
+[class*="nav-"]:hover {
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+}
+
+.nav-bottom{
+   position:fixed;
+   left:0px;
+   bottom:0px;
+}
+
+/************************************************************
 CONTENT
 *************************************************************/
 
 .view{
   width: 100%;
-  background: url(http://az616578.vo.msecnd.net/files/2016/07/23/6360489455192162291563850737_Trump.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  height: 100%;
+  background-color: #e6e6e6;
 }
 
 .content{
-  max-width: 40em;
-  padding: 10px;
-  background-color: #f0f0f0;
-}
-
-article{
-  padding: 100px 30px 30px 30px;
-}
-
-article .name,
-article .age,
-article .life{
-/*  position: relative;
-  float: left;*/
-}
-
-/************************************************************
-NAVIGATION
-*************************************************************/
-
-.menu{
-  margin: 0 auto;
-  position: fixed;
+  margin: 0;
   width: 100%;
+  text-align: center;
 }
 
-.menu .more{
-  position: relative;
-  float: left;
-  border: 1px solid black;
-  padding: 12px 18px;
-  background-color: #f0f0f0;
+.grid{
+  margin: 0 auto;
+  max-width: 760px;
+  height: 68vh;
+  padding: 5px;
+}
+
+.col{
+  height: 50%;
+}
+
+/*.col.pop-up{
+  height: 68vh;
+  position: fixed;
+  max-width: 750px;
+}*/
+
+.unit{
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  -webkit-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.2);
+  transition: background-color, box-shadow, 150ms ease-in;
   cursor: pointer;
-  transition: background-color 120ms ease-in;
+  outline: none;
 }
 
-.menu .more:nth-child(2){
-  border-left: 0px solid black;
+.unit:hover {
+/*    background-color: #f0f0f0;*/
+  -webkit-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
+  box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.45);
 }
 
-.menu .more:hover,
-.menu input:hover{
-  background-color: #e6e6e6;
+button:active {
+    background-color: #4cef8b;
+    border-bottom: 1px solid #e6e6e6;
 }
 
-.menu .more:active,
-.menu input:active{
-  background-color: #cccccc;
-}
-
-.sub-menu{
-  display: none;
-}
-
-.sub-menu ul{
-  margin: 10px 0 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.sub-menu ul li{
-  width: 300.5px;
-  padding: 20px 16.5px;
-  border-right: 1px solid black;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  border-top: 0px solid black;
-  background-color: #e6e6e6;
+button{
+  margin: 20px auto;
+  padding: 20px 80px;
+  border: 0;
+  border-bottom: 5px solid #27ae60;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #ffffff;
+  background-color: #2ecc71;
   cursor: pointer;
-  transition: background-color 120ms ease-in;
+  transition: border-bottom, background-color, 150ms linear;
+  outline: none;
+  letter-spacing: 1.5;
 }
 
-.sub-menu ul li:nth-child(1){
-  border-top: 1px solid black;
+button:hover {
+    background-color: #34e57e;
+    border-bottom: 3px solid #27ae60;
 }
 
-.sub-menu ul li:hover{
-  background-color: #cccccc;
+button:active {
+    background-color: #4cef8b;
+    border-bottom: 1px solid #27ae60;
 }
-
-.icon {
-  font-size: 28px;
-}
-
-/********** SEARCH INPUT FIELD **********/
-
-input[type=search] {
-  float: left;
-  background-image: url("https://maxcdn.icons8.com/Share/icon/p1em/Very_Basic//search1600.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 25px;
-  width: 15px;
-  padding: 20px 26.5px;
-  font-size: 14px;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-right: 1px solid black;
-  border-left: 0px solid black;
-  background-color: #f0f0f0;
-  cursor: pointer;
-  transition: background-color, width, 120ms ease-in;
-  -webkit-appearance: textfield;
-}
-
-input[type=search]:focus {
-  width: 245px;
-  background-image: none;
-  background-repeat: no-repeat;
-  background-position: left center;
-  background-size: 0px;
-  background-color: #e6e6e6;
-}
-
-[placeholder]{
-    text-overflow:ellipsis;
-}
-
-::-webkit-input-placeholder,
-::-moz-placeholder,
-::placeholder {
-  color: #e2e2e2;
-  text-overflow: ellipsis;
-
-  /* Required for text-overflow to do anything */
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-input::-webkit-search-decoration {
-  display: none; 
-}
-
 
 /************************************************************
 GRID SYSTEM
@@ -290,10 +241,14 @@ MEDIA QUERY
 *************************************************************/
 
 
-@media screen and (min-device-width: 420px) {
-
+@media screen and (max-device-width: 360px) and (max-device-height: 640px) {
+  .grid {
+      height: 60vh;
+  }
 }
 
-@media screen and (min-device-width: 768px) {
-
+@media screen and (min-device-width: 768px) and (min-device-height: 1024px) {
+  .grid {
+    height: 80vh;
+  }
 }
